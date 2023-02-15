@@ -1,0 +1,24 @@
+1 модуль:
+ 1 урок: ---
+ 2 урок: зарегистрировался в GitHub, создал тестовый репозиторий и загрузил туда файл
+ 3 урок: ---
+ 4 урок: ---
+ 5 урок: примерно понял принцип работы инспектора кода
+ 6 урок: ---
+ 7 урок: ---
+ 8 урок: ---
+2 модуль:
+ 1 урок: скачал Visual Studio Code и установил расширения
+ 2 урок: ответ - позволяет адаптировать сайт под любое устройство
+ 3 урок: ---
+ 4 урок: сайт https://infoselection.ru/infokatalog/internet-i-programmy/internet-osnovnoe/item/90-50-samykh-poseshchaemykh-sajtov-runeta
+         структура - файл 1_site.html
+         сайт
+https://www.reg.ru/blog/zhutkie-sajty-kotorye-vyzovut-u-vas-murashki/?utm_source=google.com&utm_medium=organic&utm_campaign=google.com&utm_referrer=google.com
+         структура - файл 2_site.html
+         сайт https://webref.ru/html/main
+         структура- файл 3_site.html
+ 5 урок: файл - quote.html
+ 6 урок: файл - list.html
+ 7 урок: файл - img.html
+ 8 урок: файл - video.html и 111.mp4
