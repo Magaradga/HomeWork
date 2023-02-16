@@ -1,0 +1,60 @@
+@font-face { 
+    font-family: Caveat; 
+    src: local("Caveat_regular"),
+        url("./fonts/Caveat-Regular.woff2") format('woff2'), 
+        url("./fonts/Caveat-Regular.woff") format('woff'), 
+        url("./fonts/Caveat-Regular.eot") format('eot'); 
+    font-weight: 400; 
+    font-style: normal; 
+    font-display: swap;
+}
+@font-face { 
+    font-family: Caveat; 
+    src: local("Caveat_medium"),
+        url("./fonts/Caveat-Medium.woff2") format('woff2'), 
+        url("./fonts/Caveat-Medium.woff") format('woff'), 
+        url("./fonts/Caveat-Medium.eot") format('eot'); 
+    font-weight: 500; 
+    font-style: normal; 
+    font-display: swap;
+}@font-face { 
+    font-family: Caveat; 
+    src: local("Caveat_SemiBold"),
+        url("./fonts/Caveat-SemiBold.woff2") format('woff2'), 
+        url("./fonts/Caveat-SemiBold.woff") format('woff'), 
+        url("./fonts/Caveat-SemiBold.eot") format('eot'); 
+    font-weight: 600; 
+    font-style: normal; 
+    font-display: swap;
+}
+@font-face { 
+    font-family: Caveat; 
+    src: local("Caveat_bold"),
+        url("./fonts/Caveat-Bold.woff2") format('woff2'), 
+        url("./fonts/Caveat-Bold.woff") format('woff'), 
+        url("./fonts/Caveat-Bold.eot") format('eot'); 
+    font-weight: 700; 
+    font-style: normal; 
+    font-display: swap;
+}
+@font-face { 
+    font-family: AmaticSC; 
+    src: local("AmaticSC_regular"),
+        url("./fonts/AmaticSC-Regular.woff2") format('woff2'), 
+        url("./fonts/AmaticSC-Regular.woff")  format('woff'), 
+        url("./fonts/AmaticSC-Regular.eot")  format('eot'); 
+    font-weight: 400; 
+    font-style: normal; 
+    font-display: swap;
+}@font-face { 
+    font-family: AmaticSC; 
+    src: local("AmaticSC_bold"),
+        url("./fonts/AmaticSC-Bold.woff2") format('woff2'), 
+        url("./fonts/AmaticSC-Bold.woff") format('woff'), 
+        url("./fonts/AmaticSC-Bold.eot") format('eot'); 
+    font-weight: 700; 
+    font-style: normal; 
+    font-display: swap;
+}
+
+

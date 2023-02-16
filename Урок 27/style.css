@@ -1,0 +1,11 @@
+.block {
+  animation:block 1s infinite alternate;
+}
+@keyframes block{
+  0%{
+    color:#fc0000;
+  }
+  100%{
+    color:#000;
+  }
+  } 

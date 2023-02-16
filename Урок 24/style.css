@@ -1,0 +1,9 @@
+.block {
+  background-color: #000;
+  height: 150px;
+  position: fixed;
+  bottom: 100px;
+  right: 50px;
+  left: 50%;
+}
+
