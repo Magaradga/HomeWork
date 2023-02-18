@@ -200,7 +200,7 @@ html, body {
 .header__image::after {
     display: block;
     position: absolute;
-    background: linear-gradient(138.85deg, #FFFFFF -38.72%, #FFFFFF 153.95%);
+    background-color: #FFF;
     border-radius: 59px;
     width: 281px;
     height: 102px;
