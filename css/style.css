@@ -201,7 +201,7 @@ html, body {
     display: block;
     position: absolute;
     background: linear-gradient(138.85deg, #FFFFFF -38.72%, #FFFFFF 153.95%);
-    box-shadow: 0px 28px 118px rgba(109, 108, 115, 0.12);
+    box-shadow: 0px 28px 118px rgba(109, 108, 115, 0.43);
     border-radius: 59px;
     width: 281px;
     height: 102px;
