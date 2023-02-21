@@ -1,0 +1,236 @@
+// импортируются в основной документ стилей
+@import "reset"; //обнуление стилей
+@import "fonds"; //обнуление стилей
+@import "vars"; //переменные
+@import "mixins"; //миксины и шаблоны
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+//=========================================================================
+//основное
+html, body {
+  @extend %all;
+}
+h1{
+  @extend %h1;
+}
+.wrapper{
+  @extend %wrapper;
+}
+.conteiner {
+  @extend %conteiner;
+}
+//=========================================================================
+//прописывается стили для всех страниц
+
+.header {
+  background-color: #191E20;
+
+  &__top {
+    padding: 20px 0;
+  }
+
+  &__bottom {
+    padding: 17px 0;
+  }
+}
+
+.htop {
+
+  &__inner {
+    @include location();
+    position: relative;
+    &::after{
+      @include position(185%, 0);
+      opacity: 0.2;
+      border: 1px solid #E0E1EB;
+      width: 100%;
+    }
+  }
+
+  &__navigation {
+    
+  }
+
+  &__navigation--list {
+    @include location();
+  }
+
+  &__navigation--item{
+    margin-right: 46px;
+    &:last-child{
+      margin: 0;
+    }
+  }
+
+  &__navigation--link {
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  &__languages {
+    @include location();
+  }
+
+  &__language--rus {
+    margin-right: 24px;
+    color: #FFFFFF;
+    opacity: 1;
+    font-weight: 600;
+  }
+
+  &__language--ukr {
+    position: relative;
+    color: #FFFFFF;
+    opacity: 0.3;
+    font-weight: 600;
+    &::before{
+      @include position(-50%, -12px);
+      transform: translate(50%);
+      height: 32px;
+      opacity: 0.3;
+      border: 1px solid #FFFFFF;
+    }
+  }
+
+  &__language--link {
+  }
+}
+
+
+
+.hbottom {
+
+  &__inner {
+    @include location()
+
+  }
+
+  &__logo {
+
+  }
+
+  &__logotipe {
+  }
+
+  &__content{
+    @include location();
+  }
+
+  &__search {
+    @include location();
+    margin-right: 37px;
+  }
+
+  &__search--input {
+    width: 490px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.1);
+    opacity: 0.5;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 4px;
+    font-weight: 500;
+    color: #fff;
+    padding-left: 17px;
+    padding-right: 44px;
+    margin-right: -44px;
+    &::placeholder{
+      color: #8A8A99;
+      opacity: 1;
+    }
+  }
+
+  &__search--button {
+    width: 44px;
+    height: 44px;
+    background: #FFFFFF;
+    border: 2px solid #474FA0;
+    border-radius: 4px;
+    z-index: 1;
+  }
+
+  &__video--link {
+    @include location();
+    width: 182px;
+    height: 44px;
+    background-color: #BC0209;
+    border-radius: 4px;
+    margin-right: 24px;
+  }
+
+  &__video--name{
+    height: 100%;
+    padding-top: 12px;
+    margin-left: 16px;
+    font-size: 14px;
+    line-height: 120%;
+    color: #FFFFFF;
+    }
+
+  &__video--youtube{
+    @include location( $justify-content: center);
+    background-color:#ED1C24;
+    width: 44px;
+    height: 44px;
+    border-radius: 4px;
+  }
+
+  &__icons--list {
+    @include location;
+    margin-right: 24px;
+  }
+
+  &__icon--item {
+    margin-right: 13px;
+    width: 41px;
+    height: 41px;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+
+  &__icon--link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    & svg{
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__phone {
+    @include location();
+    flex-direction: column;
+    padding-right: 18px;
+
+  }
+
+  &__phone--numder {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    line-height: 120%;
+    margin-bottom: 4px;
+    
+  }
+
+  &__phone--text {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    text-decoration-line: underline;
+    color: #FE4B09;
+    padding-left: 18px;
+    position: relative;
+    &::before{
+      @include position($top: 50%, $left: 0,$background: url("../images/header/tel.svg"));
+      transform: translate(0, -50%);
+      width: 13px;
+      height: 13px;
+    }
+  }
+}
+
