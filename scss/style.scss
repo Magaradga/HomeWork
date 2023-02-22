@@ -19,12 +19,59 @@ h1{
 .conteiner {
   @extend %conteiner;
 }
+
+
+.button {
+  display: inline-block;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 18px;
+  color: #FFFFFF;
+  padding: 21px 47px;
+  color: #FFFFFF;
+  background: linear-gradient(92.15deg, #FD4B0D 0.76%, #FF855A 120.91%);
+  border-radius: 4px;
+  white-space: nowrap;
+  transition: all .3s;
+  &:hover{
+    transform: scale(1.05);
+}
+}
+.button1 {
+  display: inline-block;
+  font-family: 'Ferry';
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 14px;
+  color: #FFFFFF;
+  padding: 23px 62px;
+  color: #FFFFFF;
+  background: linear-gradient(92.15deg, #474FA0 0.76%, #888FDA 120.91%);
+  border-radius: 4px;
+  white-space: nowrap;
+  transition: all .3s;
+  &:hover{
+    transform: scale(1.05);
+  }
+}
+
+
+
 //=========================================================================
 //прописывается стили для всех страниц
 
 .header {
   background-color: #191E20;
-
+  position: relative;
+  &::after{
+    @include position(auto, 0);
+    opacity: 0.2;
+    border: 1px solid #E0E1EB;
+    width: 100%;
+    bottom: 1px;
+  }
   &__top {
     padding: 20px 0;
   }
@@ -33,7 +80,6 @@ h1{
     padding: 17px 0;
   }
 }
-
 .htop {
 
   &__inner {
@@ -68,6 +114,11 @@ h1{
     font-size: 14px;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+    transition: all 0.3s;
+    &:hover{
+      color: #FD4B0D;
+      text-decoration-line: underline;
+    }
   }
 
   &__languages {
@@ -76,16 +127,10 @@ h1{
 
   &__language--rus {
     margin-right: 24px;
-    color: #FFFFFF;
-    opacity: 1;
-    font-weight: 600;
   }
 
   &__language--ukr {
     position: relative;
-    color: #FFFFFF;
-    opacity: 0.3;
-    font-weight: 600;
     &::before{
       @include position(-50%, -12px);
       transform: translate(50%);
@@ -93,14 +138,25 @@ h1{
       opacity: 0.3;
       border: 1px solid #FFFFFF;
     }
+    
   }
 
-  &__language--link {
+  &__language--link-rus {
+    color: #FFFFFF;
+    opacity: 1;
+    font-weight: 600;
+  }
+
+  &__language--link-ukr {
+    color: #FFFFFF;
+    opacity: 0.3;
+    font-weight: 600;
+    transition: all 0.3s;
+    &:hover{
+      opacity: 1;
+    }
   }
 }
-
-
-
 .hbottom {
 
   &__inner {
@@ -158,6 +214,10 @@ h1{
     background-color: #BC0209;
     border-radius: 4px;
     margin-right: 24px;
+    transition: all 0.3s;
+    &:hover{
+      transform: scale(1.1);
+    }
   }
 
   &__video--name{
@@ -199,23 +259,45 @@ h1{
       width: 100%;
       height: 100%;
     }
+    transition: all 0.3s;
+    &:hover{
+      transform: scale(1.3);
+    }
   }
 
   &__phone {
     @include location();
     flex-direction: column;
-    padding-right: 18px;
 
+    align-items: flex-start;
+    position: relative;
+    &::before{
+      width: 15px;
+      height: 10px;
+      @include position(9px, auto, url("../images/header/down.svg"));
+      right: 0;
+      pointer-events: none;
+    }
   }
 
   &__phone--numder {
-    display: block;
-    color: #fff;
+    padding-right: 18px;
+    display: block; 
+    font-family: 'Ferry';
+    font-style: normal;
+    font-weight: 900;
     font-size: 18px;
-    line-height: 120%;
+    color: #FFFFFF;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #191E20;
     margin-bottom: 4px;
-    
-  }
+    cursor: pointer;
+    option{
+      background-color: #191E20;
+    }
+    } 
 
   &__phone--text {
     font-weight: 600;
@@ -225,12 +307,250 @@ h1{
     color: #FE4B09;
     padding-left: 18px;
     position: relative;
+    transition: all 0.3s;
     &::before{
       @include position($top: 50%, $left: 0,$background: url("../images/header/tel.svg"));
       transform: translate(0, -50%);
       width: 13px;
       height: 13px;
     }
+    &:hover{
+      text-decoration-line: underline;
+      color: #FFFFFF;
+    }
+  }
+}
+
+.main {
+
+  &__home {
+    padding-top: 17px;
+  }
+  
+  &__selection {
+    padding-top: 80px;
+    padding-bottom: 91px;
+  }
+}
+.home {
+
+  &__inner {
+  }
+
+  &__top { 
+    position: relative;
+    z-index: 1;
+  }
+
+  &__top--inner {
+    @include location;
+    margin-bottom: -77px;
+
+  }
+
+  &__top--btn--link {
+  }
+
+  &__top--btn {
+    width: 259px;
+    text-align-last: right;
+    position: relative;
+    &::before{
+      @include position(50%, 17px, url("../images/section1/catalog.svg"));
+      width: 29px;
+      height: 28px;
+      transform: translate(0 ,-50%)
+    }
+    &::after{
+      @include position(0,60px);
+      height: 60px;
+      opacity: 0.1;
+      border: 2px solid #000000;
+    }
+
+  }
+
+
+  &__top--list {
+    @include location;
+  }
+
+  &__top--item {
+    margin-right: 50px;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+
+  &__top--link {
+    font-family: 'Ferry';
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 130%;
+    color: #FFFFFF;
+    transition: all 0.3s;
+    &:hover{
+      color: #FD4B0D;
+    }
+  }
+
+  &__slader {
+    
+  }
+
+  &__slide {
+    height: 706px;
+    background: url(../images/section1/bg.jpg) 50% 50% / cover  no-repeat;
+    width: 100%;
+  }
+
+  &__slade--inner {
+    padding-top: 202px;
+    
+  }
+
+  &__slade--heading {
+    font-family: Ferry;
+    color: #FFFFFF;
+    max-width: 704px;
+    margin-bottom: 16px;
+  }
+
+  &__slide--text {
+    color: #FFFFFF;
+    opacity: 0.8;
+    font-size: 16px;
+    line-height: 140.62%;
+    max-width: 589px;
+    margin-bottom: 32px;
+  }
+
+  &__slide--btn {
+    margin-bottom: 51px;
+  }
+
+  &__slide--btn--link {
+  }
+
+  &__slide--numders {
+    @include location($justify-content: flex-start);
+  }
+
+  &__slide--number {
+    margin-left: 133px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 150%;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-right: 6px;
+    color: #FFFFFF;
+    &:last-child{
+      font-size: 16px;
+      opacity: 0.5;
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+  &__control {
+    @include location($justify-content: flex-start);
+    position: relative;
+    top: -178px;
+    left:0;
+  }
+
+  &__arrow {
+    svg{
+      opacity: 1;
+    }
+    @include location($justify-content: center);
+    width: 46px;
+    height: 46px;
+    background: #ffffff07;
+    border: 1.6px solid #ffffff1a;
+    border-radius: 50%;
+    transition: all 0.3s;
+    // opacity: 0.1;
+    
+    &:hover{
+      background: #FD4B0D;
+      opacity: 1;
+      border: none;
+    }
+  }
+
+  &__prev {
+    margin-right: 15px;
+  }
+
+  &__next {
+  }
+}
+.main {
+
+}
+.selection {
+
+  &__inner {
+  }
+
+  &__headings {
+  }
+
+  &__heading--top {
+    margin-bottom: 12px;
+  }
+
+  &__heading--bottom {
+    font-size: 24px;
+    color: #4B53A3;
+    margin-bottom: 32px;
+  }
+
+  &__form {
+    box-shadow: 0px 4px 74px #E0E1E8;
+    border-radius: 16px;
+    padding: 0 42px;
+    padding-top: 48px;
+    padding-bottom: 50px;
+    max-width: 912px;
+  }
+
+  &__form--column {
+    
+  }
+
+  &__form--lable {
+  }
+
+  &__form--selection {
+  }
+
+  &__form--option1 {
+  }
+
+  &__form--option {
+  }
+
+  &__form--row {
+  }
+
+  &__form--btn {
+  }
+
+  &__info {
+  }
+
+  &__info--list {
+  }
+
+  &__info--item {
+  }
+
+  &__info--heading {
+  }
+
+  &__info--text {
   }
 }
 
