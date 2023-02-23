@@ -1301,6 +1301,10 @@ h1{
 
   &__slade--link {
     @include location($justify-content: center);
+    transition: all 0.3s;
+    &:hover{
+      transform: scale(1.1);
+    }
   }
 
   &__slade--link--text {
@@ -1315,6 +1319,8 @@ h1{
   }
 
   &__slade--link--item {
+    @include location($align-items:flex-end,$justify-content: center);
+    height: 16px;
   }
 
   &__arrow {
