@@ -1776,6 +1776,14 @@ h1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.auction__slade--link:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
 }
 .auction__slade--link--text {
   margin-right: 12px;
@@ -1786,6 +1794,18 @@ h1 {
   font-weight: 900;
   font-size: 14px;
   line-height: 120%;
+}
+.auction__slade--link--item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 16px;
 }
 .auction__arrow {
   display: -webkit-box;
