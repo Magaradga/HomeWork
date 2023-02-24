@@ -42,5 +42,8 @@ $(function () {
     }
 })
 
+$(document).ready(function() {
+  $(".text__skroll").customScrollbar();
+});
 
 })
