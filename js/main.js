@@ -46,4 +46,22 @@ $(document).ready(function() {
   $(".text__skroll").customScrollbar();
 });
 
+	$('.selection__form--selection, .selection__row').styler({
+  });
+
+  $('.burger').on('click', function(e) {
+    e.preventDefault()
+    $('.burger').toggleClass('burger--active');
+  }) 
+
+
+
+    $('.burger, .overlay, .header__inner a').on('click', function(e) {
+      e.preventDefault()
+      $('.header__inner').toggleClass('header__inner--open')
+      $('.overlay').toggleClass('overlay--show')
+    }) 
+    
+  
 })
+
