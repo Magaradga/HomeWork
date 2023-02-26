@@ -100,7 +100,7 @@ $('.home__top--btn--link--burger').on('click', function(){
 $('a[href^="#"').on('click', function() {
   let href = $(this).attr('href');
   $('html, body').animate({
-      scrollTop: $(href).offset().top
+      scrollTop: $(href).offset().top -300
     }, 1000);
   return false;
 });
