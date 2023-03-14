@@ -1,0 +1,38 @@
+%all {
+  font-family: 'Montserrat', sans-serif;
+  color: #191E20;
+  line-height: 120%;
+  font-weight: 400;
+  font-size: 14px;
+}
+%h1 {
+  font-family: 'ferry', sans-serif;
+  color: #191E20;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 130%;
+}
+%wrapper{
+  min-height: 100%;
+  width: 100%;   
+  overflow: hidden;
+}
+%conteiner{
+  max-width: 1470px;
+  padding: 0 15px;
+  margin: 0 auto;
+  height: 100%;
+}
+@mixin location($display: flex, $align-items:center, $justify-content: space-between){
+  display: $display;
+  align-items:  $align-items;
+  justify-content: $justify-content;
+  }
+@mixin position($top: 0, $left: 0, $background: #fff){
+  position: absolute;
+  display: block;
+  content: "";
+  top: $top;
+  left: $left;
+  background: $background ;
+}
